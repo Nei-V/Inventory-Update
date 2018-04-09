@@ -5,14 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Inventory Update</title>
+        <style>
+        td {
+            background-color:gainsboro;
+            border: solid;
+        }
+        </style>
     </head>
     <body>
         <p>array 1 (original inventory):</p>
-        <p id="array1"></p>
+        <table id="array1"></table>
         <p>array 2 (new products):</p>
-        <p id="array2"></p>
-        <p>Result: (updated inventory) </p>
-        <p id="result"></p>
+        <table id="array2"></table>
+        <p onclick="getresult(finalArray)">Result: (Press here fo updated inventory) </p>
+        <table id="result"></table>
         <script src="inventoryupdate.js"></script>
     </body>
 </html>
