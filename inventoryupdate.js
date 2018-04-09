@@ -23,7 +23,6 @@ function updateInventory(arr1, arr2) {
 
 
 
-
     arr1.forEach(function (item) {
         showArr1.innerHTML += "<tr>" + "<td>" + item[0] + "</td>" + "<td>" + item[1] + "</td>" + "</tr>";
     });
