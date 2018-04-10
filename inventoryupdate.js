@@ -12,7 +12,7 @@ var newInv = [
     [7, "Toothpaste"]
 ];
 
-let finalArray=[];
+let finalArray = [];
 
 let showFinalArray = document.getElementById("result");
 
@@ -21,22 +21,37 @@ function updateInventory(arr1, arr2) {
     let showArr1 = document.getElementById("array1");
     let showArr2 = document.getElementById("array2");
 
-
-
+    finalArray=[].concat(arr1);
+    console.log(finalArray);
     arr1.forEach(function (item) {
         showArr1.innerHTML += "<tr>" + "<td>" + item[0] + "</td>" + "<td>" + item[1] + "</td>" + "</tr>";
     });
     arr2.forEach(function (item) {
         showArr2.innerHTML += "<tr>" + "<td>" + item[0] + "</td>" + "<td>" + item[1] + "</td>" + "</tr>";
     });
-//not finnished - still has to add new items and update inventory
-    return finalArray = arr1.concat(arr2);
+    //not finnished - still has to add new items and update inventory
+
+    arr1.forEach(function (item) {
+        function checkandUpdateArr1() {
+            console.log("arr2", arr2);
+            console.log("arr1", arr1)
+            console.log("item[1]", item[1]);
+            //console.log("arr2[1]",arr2[1]);
+            if (arr2.find(k => k[1] == item[1]) !== undefined) {
+                console.log(arr2.find(k => k[1] == item[1]));
+            };
+        };
+        checkandUpdateArr1();
+    });
+
+    console.log(finalArray);
 
 };
 
 updateInventory(curInv, newInv);
 
 function getresult() {
+    console.log(finalArray);
     finalArray.forEach(function (item) {
         console.log(item);
         showFinalArray.innerHTML += "<tr>" + "<td>" + item[0] + "</td>" + "<td>" + item[1] + "</td>" + "</tr>";
