@@ -44,8 +44,7 @@ function updateInventory(arr1, arr2) {
                 finalArray[arr1.indexOf(item)][0] = item[0] + foundItem[0];
             }
             else {//not wroking yet)
-                arr2.find(k => k[1] == item[1])
-                console.log("value of not found",valueNotFound);
+               
             };
         };
         checkandUpdateArr1();
